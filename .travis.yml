@@ -12,6 +12,14 @@ install:
   - source /opt/qt*/bin/qt*-env.sh
 
 script:
+  # Marble
+  - git clone https://github.com/KDE/marble
+  - cd marble
+  - cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+  - make -j$(nproc)
+  - sudo make install
+  - ..
+  # torrc_util
   - cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
   - make -j$(nproc)
   - make DESTDIR=appdir -j$(nproc) install ; find appdir/
