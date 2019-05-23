@@ -20,6 +20,13 @@ script:
   - sudo make install
   - sudo ldconfig
   - cd ..
+  # libs/map_widget_factory
+  - cd libs/map_widget_factory
+  - cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+  - make -j$(nproc)
+  - sudo make install
+  - sudo ldconfig
+  - cd ../..
   # torrc_util
   - cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
   - make -j$(nproc)
