@@ -2,6 +2,6 @@
 Type=Application
 Name=Torrc Utility
 Comment=GUI for managing some options in Tor's configuration file
-Exec=torrc_util
+Exec=torrc_utility
 Icon=torrc_util
 Categories=Network;
