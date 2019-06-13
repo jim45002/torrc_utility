@@ -34,7 +34,7 @@ script:
   # The following should really be done by "make install" rather than by hand
   # https://github.com/jim45002/torrc_util/issues/1#issuecomment-495309220
   - strip torrc_util
-  - mkdir -p appdir/usr/bin/torrc_util && cp torrc_util appdir/usr/bin/
+  - mkdir -p appdir/usr/bin/torrc_utility && cp torrc_util appdir/usr/bin/
   - mkdir -p appdir/usr/share/applications && cp resources/torrc_util.desktop appdir/usr/share/applications/
   - mkdir -p appdir/usr/share/icons/hicolor/256x256/applications && cp resources/darknet.png appdir/usr/share/icons/hicolor/256x256/applications/torrc_util.png
   - wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
